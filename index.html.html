@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1a44">
+<title>Information Systems Society | Accomplishments</title>
+<meta name="description" content="Highlights, awards, events and projects from Information Systems Society.">
+<meta property="og:title" content="Information Systems Society | Accomplishments">
+<meta property="og:description" content="Highlights, awards, events and projects from Information Systems Society.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #f4f7fe; --surface: #ffffff; --surface-2: #eaf0ff;
+    --text: #0b1b3a; --muted: #51628a;
+    --accent: #2563eb; --accent-2: #0891b2; --accent-text: #ffffff;
+    --border: #d8e2f7; --radius: 16px; --danger: #b91c1c;
+    --navy: #050d24; --navy-2: #0a1a44;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    --shadow: 0 1px 2px rgba(11,27,58,.06), 0 8px 24px rgba(37,99,235,.08);
+    --shadow-hover: 0 2px 4px rgba(11,27,58,.08), 0 16px 36px rgba(37,99,235,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #060d1f; --surface: #0d1830; --surface-2: #14244a;
+      --text: #e6edff; --muted: #9db0d6;
+      --accent: #5b9dff; --accent-2: #22d3ee; --accent-text: #04122e;
+      --border: #1c2b4d; --danger: #fca5a5;
+      --shadow: 0 1px 2px rgba(0,0,0,.5);
+      --shadow-hover: 0 16px 36px rgba(34,211,238,.12);
+    }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  body.editing { padding-bottom: 120px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+  a { color: var(--accent); }
+  :focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; border-radius: 4px; }
+  .skip {
+    position: absolute; left: 12px; top: -60px; background: var(--accent);
+    color: var(--accent-text); padding: 10px 16px; border-radius: 8px; z-index: 100;
+  }
+  .skip:focus { top: 12px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+  /* ---------- Header ---------- */
+  header.site {
+    position: sticky; top: 0; z-index: 10; background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; text-decoration: none; color: var(--text); }
+  .brand::before {
+    content: "IS"; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px;
+    font-family: var(--mono); font-size: .8rem; font-weight: 800; color: #fff;
+    background: linear-gradient(135deg, #1d4ed8, #0891b2); box-shadow: 0 4px 14px rgba(37,99,235,.35);
+  }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; flex-wrap: wrap; }
+  nav a { display: block; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--muted); font-weight: 600; font-size: .95rem; transition: background .15s, color .15s; }
+  nav a:hover { background: var(--surface-2); color: var(--text); }
+
+  /* ---------- Hero ---------- */
+  .hero-band {
+    position: relative; overflow: hidden; color: #eaf1ff; padding-bottom: 84px;
+    background:
+      radial-gradient(900px 420px at 92% -20%, rgba(34,211,238,.28), transparent 60%),
+      radial-gradient(800px 460px at 0% 120%, rgba(37,99,235,.5), transparent 60%),
+      linear-gradient(180deg, var(--navy), var(--navy-2));
+  }
+  .hero-band::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(120,160,255,.10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(120,160,255,.10) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 78%);
+    mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 78%);
+  }
+  .hero { position: relative; display: grid; gap: 40px; align-items: center; padding-top: 76px; padding-bottom: 0; }
+  @media (min-width: 900px) { .hero { grid-template-columns: 1.15fr .85fr; } }
+  .eyebrow {
+    display: inline-block; margin-bottom: 18px; padding: 4px 12px; border-radius: 999px;
+    font-family: var(--mono); font-size: .76rem; letter-spacing: .1em; text-transform: uppercase;
+    color: #7dd3fc; border: 1px solid rgba(125,211,252,.35); background: rgba(125,211,252,.08);
+  }
+  .hero h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.1; letter-spacing: -.025em; margin: 0 0 16px; color: #fff; }
+  .hero p { font-size: 1.12rem; color: #b9c8ec; max-width: 56ch; margin: 0 0 28px; }
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-art { display: none; }
+  @media (min-width: 900px) { .hero-art { display: block; } }
+  .code {
+    border-radius: 16px; overflow: hidden; border: 1px solid rgba(125,211,252,.25);
+    background: rgba(8,18,46,.75); box-shadow: 0 20px 60px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.02) inset;
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  }
+  .code-bar { display: flex; align-items: center; gap: 7px; padding: 11px 14px; border-bottom: 1px solid rgba(125,211,252,.15); }
+  .code-bar i { width: 11px; height: 11px; border-radius: 50%; background: #334a7a; display: block; }
+  .code-bar i:nth-child(1) { background: #ff6b6b; } .code-bar i:nth-child(2) { background: #fbbf24; } .code-bar i:nth-child(3) { background: #34d399; }
+  .code-bar span { margin-left: 8px; font-family: var(--mono); font-size: .78rem; color: #8aa0cf; }
+  .code pre { margin: 0; padding: 18px 20px 22px; font-family: var(--mono); font-size: .88rem; line-height: 1.7; color: #d6e2ff; overflow-x: auto; }
+  .code .k { color: #7dd3fc; } .code .p { color: #a5b4fc; } .code .s { color: #86efac; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-block; background: var(--accent); color: var(--accent-text);
+    padding: 12px 22px; border-radius: 12px; font-weight: 700; text-decoration: none; border: 0; cursor: pointer;
+    font-size: 1rem; font-family: inherit; box-shadow: 0 6px 18px rgba(37,99,235,.3);
+    transition: transform .15s ease, filter .15s ease;
+  }
+  .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .btn.secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); box-shadow: none; }
+  .hero-cta .btn { background: #2f6bff; color: #fff; }
+  .hero-cta .btn.ghost { background: transparent; color: #eaf1ff; border: 1px solid rgba(255,255,255,.35); box-shadow: none; }
+
+  /* ---------- Stats ---------- */
+  .stats { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: -46px 0 0; }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; box-shadow: var(--shadow-hover); }
+  .stat strong {
+    display: block; font-size: 2.1rem; line-height: 1.1; font-weight: 800; letter-spacing: -.02em;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent);
+  }
+  .stat span { color: var(--muted); font-size: .92rem; font-weight: 600; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 44px 0; }
+  main h2 { font-size: 1.7rem; letter-spacing: -.015em; margin: 0 0 24px; }
+  main h2::after {
+    content: ""; display: block; width: 52px; height: 4px; border-radius: 4px; margin-top: 10px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  }
+  h2 { font-size: 1.6rem; margin: 0 0 20px; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 22px; }
+  .chip {
+    border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    padding: 8px 16px; border-radius: 999px; cursor: pointer; font-size: .92rem; font-weight: 600; font-family: inherit;
+    transition: border-color .15s, background .15s;
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+  .filters input, .filters select {
+    padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); font-size: .95rem; font-family: inherit;
+  }
+  .filters input:focus, .filters select:focus { border-color: var(--accent); }
+  .filters input { flex: 1 1 200px; min-width: 160px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
+  .card {
+    position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .card::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; z-index: 1; opacity: 0; transition: opacity .18s;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
+  .card:hover::before { opacity: 1; }
+  .thumb { aspect-ratio: 16 / 9; display: grid; place-items: center; font-size: 3rem; background: linear-gradient(135deg, var(--c1), var(--c2)); }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .meta { color: var(--muted); font-size: .85rem; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .tag {
+    background: var(--surface-2); color: var(--accent); border: 1px solid var(--border); border-radius: 999px; padding: 1px 10px;
+    font-family: var(--mono); font-size: .74rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  }
+  .card h3 { margin: 0; font-size: 1.1rem; line-height: 1.3; letter-spacing: -.01em; }
+  .card p { margin: 0; color: var(--muted); flex: 1; }
+  .card button.more {
+    align-self: flex-start; background: none; border: 0; color: var(--accent);
+    font-weight: 700; cursor: pointer; padding: 4px 0; font-size: .95rem; font-family: inherit;
+  }
+  .card button.more:hover { text-decoration: underline; }
+  .admin-actions { display: flex; gap: 8px; margin-top: 4px; }
+  .mini {
+    border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    border-radius: 8px; padding: 5px 12px; cursor: pointer; font-weight: 600; font-size: .9rem; font-family: inherit;
+  }
+  .mini.danger { color: var(--danger); border-color: var(--danger); }
+  .empty { color: var(--muted); padding: 8px 0 20px; font-size: .92rem; }
+
+  .about-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .about-grid > div { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+  .about-grid h3 { margin: 0 0 8px; color: var(--accent); font-size: 1.05rem; }
+  .about-grid p { margin: 0; color: var(--muted); }
+
+  #contact .btn { margin-top: 4px; }
+
+  /* ---------- Dialogs ---------- */
+  dialog {
+    border: 1px solid var(--border); border-radius: 20px; padding: 0;
+    max-width: 640px; width: calc(100% - 32px); background: var(--surface); color: var(--text);
+    max-height: calc(100vh - 32px); overflow: auto; box-shadow: 0 30px 80px rgba(3,10,30,.45);
+  }
+  dialog::backdrop { background: rgba(3,10,30,.65); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+  .dlg-body { padding: 24px; }
+  .dlg-body h2 { margin-bottom: 8px; }
+  .dlg-body .thumb { border-radius: 12px; overflow: hidden; margin: 12px 0; }
+  .dlg-close { float: right; padding: 8px 16px; font-size: .9rem; }
+
+  #form { padding: 24px; display: grid; gap: 14px; }
+  #form h2 { margin: 0; }
+  .field { display: grid; gap: 6px; }
+  .field label { font-weight: 700; font-size: .95rem; }
+  .field input, .field select, .field textarea {
+    padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px;
+    background: var(--bg); color: var(--text); font: inherit; width: 100%;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--accent); }
+  .field small { color: var(--muted); }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .row .field { flex: 1 1 180px; }
+  .check { display: flex; gap: 10px; align-items: center; }
+  .preview { display: grid; gap: 8px; justify-items: start; }
+  .preview img { max-width: 100%; border-radius: 10px; aspect-ratio: 16 / 9; object-fit: cover; }
+  .form-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+  #formErr { color: var(--danger); margin: 0; font-weight: 600; }
+
+  #loginForm { padding: 24px; display: grid; gap: 14px; }
+  #loginForm h2 { margin: 0; }
+  #loginMsg { margin: 0; color: var(--muted); }
+  #loginErr { color: var(--danger); margin: 0; font-weight: 600; min-height: 1.2em; }
+
+  /* ---------- Manage toolbar + toast ---------- */
+  #toolbar {
+    position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 50;
+    background: var(--navy); color: #eaf1ff; border: 1px solid rgba(125,211,252,.28); border-radius: 16px; padding: 10px 14px;
+    display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center;
+    max-width: calc(100% - 24px); box-shadow: 0 12px 40px rgba(0,0,0,.45);
+  }
+  #toolbar .status { font-size: .86rem; flex: 1 1 100%; text-align: center; color: #b9c8ec; }
+  #toolbar .btn { background: #eaf1ff; color: #0b1b3a; padding: 8px 14px; font-size: .9rem; box-shadow: none; }
+  #toolbar .btn.ghost { background: transparent; color: #eaf1ff; border: 1px solid rgba(234,241,255,.5); }
+  #toast {
+    position: fixed; top: 76px; left: 50%; transform: translateX(-50%); z-index: 60;
+    background: var(--navy); color: #eaf1ff; border: 1px solid rgba(125,211,252,.28);
+    padding: 10px 16px; border-radius: 12px; max-width: calc(100% - 24px); box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  }
+  #toast:empty { display: none; }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--navy); color: #9db0d6; border-top: 1px solid rgba(125,211,252,.15); padding: 30px 0; font-size: .92rem; }
+  .linklike { background: none; border: 0; color: #7dd3fc; text-decoration: underline; cursor: pointer; font: inherit; padding: 0; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" id="brandName">Information Systems Society</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#featured">Highlights</a></li>
+        <li><a href="#all">All Accomplishments</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero-band" id="top">
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Student Organization · Information Systems</span>
+        <h1 id="heroTitle"></h1>
+        <p id="heroTagline"></p>
+        <div class="hero-cta">
+          <a class="btn" href="#all">See our accomplishments</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="code">
+          <div class="code-bar"><i></i><i></i><i></i><span>society.js</span></div>
+<pre><code><span class="k">const</span> society = {
+  <span class="p">focus</span>: [<span class="s">"data"</span>, <span class="s">"systems"</span>, <span class="s">"web"</span>],
+  <span class="p">goal</span>:  <span class="s">"learn · build · lead"</span>,
+};
+
+<span class="k">export default</span> society;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats" id="stats" aria-label="Organization highlights in numbers"></div>
+
+    <section id="featured" aria-labelledby="featuredH">
+      <h2 id="featuredH">Highlights</h2>
+      <div class="grid" id="featuredGrid"></div>
+    </section>
+
+    <section id="all" aria-labelledby="allH">
+      <h2 id="allH">All Accomplishments</h2>
+      <div class="filters">
+        <div id="chips" role="group" aria-label="Filter by category" style="display:flex;gap:10px;flex-wrap:wrap"></div>
+        <label for="year" style="position:absolute;left:-9999px">Filter by year</label>
+        <select id="year"></select>
+        <label for="search" style="position:absolute;left:-9999px">Search accomplishments</label>
+        <input id="search" type="search" placeholder="Search…">
+      </div>
+      <p class="empty" id="count" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="about" aria-labelledby="aboutH">
+      <h2 id="aboutH">About Us</h2>
+      <div class="about-grid">
+        <div><h3>Our mission</h3><p id="aboutMission"></p></div>
+        <div><h3>Our story</h3><p id="aboutStory"></p></div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contactH">
+      <h2 id="contactH">Contact</h2>
+      <p>Want to collaborate, join us, or learn more? Reach out:</p>
+      <p><a class="btn" id="emailBtn" href="#">Email us</a></p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> <span id="footName"></span>. All rights reserved.</div>
+</footer>
+
+<!-- Detail pop-up (visitors) -->
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dlg-body">
+    <button class="btn dlg-close" id="dlgClose" type="button" aria-label="Close details">Close</button>
+    <div class="meta" id="dlgMeta"></div>
+    <h2 id="dlgTitle"></h2>
+    <div id="dlgThumb"></div>
+    <div id="dlgText"></div>
+  </div>
+</dialog>
+
+<!-- Add / edit form (manage mode) -->
+<dialog id="formDlg" aria-labelledby="formTitle">
+  <form id="form" novalidate>
+    <h2 id="formTitle">Add accomplishment</h2>
+    <div class="field">
+      <label for="fTitle">Title *</label>
+      <input id="fTitle" maxlength="120" autocomplete="off">
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="fDate">Date *</label>
+        <input id="fDate" type="date">
+      </div>
+      <div class="field">
+        <label for="fCat">Category</label>
+        <select id="fCat"></select>
+      </div>
+    </div>
+    <div class="field">
+      <label for="fSummary">One-line summary *</label>
+      <input id="fSummary" maxlength="160" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="fDetails">Full details</label>
+      <textarea id="fDetails" rows="5"></textarea>
+      <small>Leave a blank line between paragraphs.</small>
+    </div>
+    <div class="field">
+      <label for="fImage">Picture (optional)</label>
+      <input id="fImage" type="file" accept="image/*">
+      <small>Pictures are resized automatically so the site stays fast.</small>
+      <div class="preview" id="imgPreview"></div>
+    </div>
+    <div class="field" id="altField" hidden>
+      <label for="fAlt">Describe the picture (for screen readers)</label>
+      <input id="fAlt" maxlength="160" autocomplete="off">
+    </div>
+    <label class="check"><input id="fFeatured" type="checkbox"> Show in Highlights on the home page</label>
+    <p id="formErr" role="alert"></p>
+    <div class="form-actions">
+      <button type="button" class="btn secondary" id="formCancel">Cancel</button>
+      <button type="submit" class="btn">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Officer sign-in -->
+<dialog id="loginDlg" aria-labelledby="loginTitle">
+  <form id="loginForm" novalidate>
+    <h2 id="loginTitle">Officer sign-in</h2>
+    <p id="loginMsg"></p>
+    <div class="field">
+      <label for="pass">Passcode</label>
+      <input id="pass" type="password" autocomplete="current-password">
+    </div>
+    <div class="field" id="pass2Field" hidden>
+      <label for="pass2">Type it again</label>
+      <input id="pass2" type="password" autocomplete="new-password">
+    </div>
+    <p id="loginErr" role="alert"></p>
+    <div class="form-actions">
+      <button type="button" class="btn secondary" id="loginCancel">Cancel</button>
+      <button type="submit" class="btn">Continue</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Manage-mode toolbar -->
+<div id="toolbar" role="region" aria-label="Manage events" hidden>
+  <span class="status" id="tbStatus"></span>
+  <button class="btn" id="addBtn" type="button">+ Add accomplishment</button>
+  <button class="btn" id="exportBtn" type="button">⬇ Download updated website</button>
+  <button class="btn ghost" id="passBtn" type="button">Change passcode</button>
+  <button class="btn ghost" id="resetBtn" type="button">Discard my changes</button>
+  <button class="btn ghost" id="doneBtn" type="button">Done</button>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- Published accomplishments. "Download updated website" rewrites this block for you. -->
+<script id="seed" type="application/json">[
+  {"id":"robotics-2026","title":"Regional Robotics Championship, 1st Place","date":"2026-10-14","category":"Awards","featured":true,"summary":"Our team took first place out of 24 schools.","details":"After three months of preparation, our team of eight members built and programmed a robot that won the regional championship. The win qualifies us for the national finals next year.","image":"","imageAlt":""},
+  {"id":"tech-fair-2026","title":"Annual Tech Fair 2026","date":"2026-08-22","category":"Events","featured":true,"summary":"Over 400 attendees joined our biggest fair yet.","details":"The Tech Fair featured 15 booths, 6 guest speakers and a student demo showcase. Attendance doubled compared to last year.","image":"","imageAlt":""},
+  {"id":"community-app-2026","title":"Community Helpdesk App Launched","date":"2026-05-30","category":"Projects","featured":true,"summary":"A free web app that connects residents with volunteers.","details":"Built entirely by our members, the app lets residents request help and volunteers sign up for tasks. It is now used by three neighborhood groups.","image":"","imageAlt":""},
+  {"id":"tree-planting-2025","title":"Tree Planting Drive","date":"2025-11-09","category":"Community","featured":false,"summary":"250 seedlings planted along the riverbank.","details":"Working with local partners, 60 volunteers planted 250 native seedlings in a single morning.","image":"","imageAlt":""},
+  {"id":"hackathon-2025","title":"Hackathon Runner-Up","date":"2025-03-15","category":"Awards","featured":false,"summary":"Second place at the inter-university hackathon.","details":"A team of four built a prototype in 24 hours and presented it to a panel of industry judges.","image":"","imageAlt":""},
+  {"id":"orientation-2025","title":"Freshman Orientation Program","date":"2025-08-05","category":"Events","featured":false,"summary":"Welcomed 180 new students with workshops and games.","details":"A full day of activities designed to help new students meet peers, learn about campus resources and join organizations.","image":"","imageAlt":""}
+]</script>
+<!-- Officer passcode (stored as a salted hash). "Download updated website" rewrites this block. -->
+<script id="lock" type="application/json">{"hash":"","salt":""}</script>
+
+<script>
+/* =====================================================================
+   EDIT THIS: your organization info
+   (Accomplishments are added with the "Manage events" link in the footer.)
+   ===================================================================== */
+const ORG = {
+  name: "Information Systems Society",
+  heroTitle: "Building the future of information systems, together.",
+  tagline: "Awards, events and projects from the students of the Information Systems Society, where data, software and business technology meet.",
+  email: "hello@example.org",
+  mission: "To grow the next generation of information systems professionals through learning, collaboration and real-world projects.",
+  story: "The Information Systems Society brings together students who love software, data and technology. We run workshops, hackathons and community projects that turn classroom ideas into real results."
+};
+
+/* =====================================================================
+   The code below builds the site. You normally do not need to edit it.
+   ===================================================================== */
+const ICONS  = { Awards: "🏆", Events: "🎉", Projects: "💡", Community: "🤝" };
+const COLORS = {
+  Awards:    ["#1e3a8a", "#3b82f6"],
+  Events:    ["#0e7490", "#22d3ee"],
+  Projects:  ["#4338ca", "#818cf8"],
+  Community: ["#0f766e", "#2dd4bf"]
+};
+const CATEGORIES = Object.keys(ICONS);
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const fmtDate = (d) => new Date(d + "T00:00:00").toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+const yearOf = (d) => d.slice(0, 4);
+const paras = (s) => s.split(/\n\s*\n/).filter(Boolean).map((p) => `<p>${esc(p).replace(/\n/g, "<br>")}</p>`).join("");
+const today = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+
+/* ---------- Data: published seed + optional draft saved on this device ---------- */
+const SEED_TEXT = $("seed").textContent;
+const SEED = JSON.parse(SEED_TEXT);
+const hashStr = (s) => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return String(h); };
+const SEED_SIG = hashStr(SEED_TEXT);
+
+function openDB() {
+  return new Promise((res, rej) => {
+    const r = indexedDB.open("orgsite", 1);
+    r.onupgradeneeded = () => r.result.createObjectStore("kv");
+    r.onsuccess = () => res(r.result);
+    r.onerror = () => rej(r.error);
+  });
+}
+async function idbGet(k) {
+  const db = await openDB();
+  return new Promise((res, rej) => { const q = db.transaction("kv").objectStore("kv").get(k); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); });
+}
+async function idbSet(k, v) {
+  const db = await openDB();
+  return new Promise((res, rej) => { const t = db.transaction("kv", "readwrite"); t.objectStore("kv").put(v, k); t.oncomplete = () => res(); t.onerror = () => rej(t.error); });
+}
+async function idbDel(k) {
+  const db = await openDB();
+  return new Promise((res, rej) => { const t = db.transaction("kv", "readwrite"); t.objectStore("kv").delete(k); t.oncomplete = () => res(); t.onerror = () => rej(t.error); });
+}
+
+let items = [];
+let editMode = false;
+let status = "";
+let editingId = null;
+let pendingImage;            // undefined = unchanged, "" = removed, string = new picture
+const state = { category: "All", year: "All", q: "" };
+const sorted = () => [...items].sort((a, b) => b.date.localeCompare(a.date));
+
+let toastTimer;
+function toast(msg) {
+  const t = $("toast"); t.textContent = msg;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.textContent = ""; }, 6000);
+}
+
+/* ---------- Rendering ---------- */
+function thumbHTML(item) {
+  if (item.image) return `<div class="thumb"><img src="${esc(item.image)}" alt="${esc(item.imageAlt || "")}" loading="lazy"></div>`;
+  const [c1, c2] = COLORS[item.category] || ["#334155", "#94a3b8"];
+  return `<div class="thumb" style="--c1:${c1};--c2:${c2}" aria-hidden="true">${ICONS[item.category] || "⭐"}</div>`;
+}
+function cardHTML(item) {
+  const admin = editMode
+    ? `<div class="admin-actions">
+         <button class="mini" type="button" data-act="edit" data-id="${esc(item.id)}">Edit</button>
+         <button class="mini danger" type="button" data-act="delete" data-id="${esc(item.id)}">Delete</button>
+       </div>` : "";
+  return `<article class="card">
+    ${thumbHTML(item)}
+    <div class="card-body">
+      <div class="meta"><span class="tag">${esc(item.category)}</span><time datetime="${esc(item.date)}">${fmtDate(item.date)}</time></div>
+      <h3>${esc(item.title)}</h3>
+      <p>${esc(item.summary)}</p>
+      <button class="more" type="button" data-id="${esc(item.id)}" aria-label="Read more about ${esc(item.title)}">Read more →</button>
+      ${admin}
+    </div>
+  </article>`;
+}
+function renderStats() {
+  const list = sorted();
+  const stats = [
+    [list.length, "Accomplishments"],
+    [list.filter((i) => i.category === "Awards").length, "Awards"],
+    [list.filter((i) => i.category === "Events").length, "Events"],
+    [new Set(list.map((i) => yearOf(i.date))).size, "Years of activity"]
+  ];
+  $("stats").innerHTML = stats.map(([n, l]) => `<div class="stat"><strong>${n}</strong><span>${l}</span></div>`).join("");
+}
+function renderFeatured() {
+  const f = sorted().filter((i) => i.featured).slice(0, 3);
+  $("featuredGrid").innerHTML = f.map(cardHTML).join("");
+  $("featured").hidden = !f.length;
+}
+function renderFilters() {
+  const list = sorted();
+  const cats = ["All", ...new Set(list.map((i) => i.category))];
+  const yrs = ["All", ...[...new Set(list.map((i) => yearOf(i.date)))].sort().reverse()];
+  if (!cats.includes(state.category)) state.category = "All";
+  if (!yrs.includes(state.year)) state.year = "All";
+  $("chips").innerHTML = cats.map((c) =>
+    `<button class="chip" type="button" data-cat="${esc(c)}" aria-pressed="${c === state.category}">${esc(c)}</button>`).join("");
+  $("year").innerHTML = yrs.map((y) => `<option value="${y}">${y === "All" ? "All years" : y}</option>`).join("");
+  $("year").value = state.year;
+}
+function renderList() {
+  const q = state.q.trim().toLowerCase();
+  const shown = sorted().filter((i) =>
+    (state.category === "All" || i.category === state.category) &&
+    (state.year === "All" || yearOf(i.date) === state.year) &&
+    (!q || (i.title + " " + i.summary + " " + i.details).toLowerCase().includes(q)));
+  $("grid").innerHTML = shown.map(cardHTML).join("");
+  $("count").textContent = items.length === 0
+    ? "No accomplishments yet."
+    : shown.length ? `Showing ${shown.length} of ${items.length}` : "No accomplishments match your filters.";
+}
+function renderAll() { renderStats(); renderFeatured(); renderFilters(); renderList(); }
+
+/* ---------- Visitor interactions ---------- */
+$("chips").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-cat]");
+  if (!b) return;
+  state.category = b.dataset.cat;
+  document.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", c === b));
+  renderList();
+});
+$("year").addEventListener("change", (e) => { state.year = e.target.value; renderList(); });
+$("search").addEventListener("input", (e) => { state.q = e.target.value; renderList(); });
+
+const dlg = $("dlg");
+function openItem(id) {
+  const item = items.find((i) => i.id === id);
+  if (!item) return;
+  $("dlgMeta").innerHTML = `<span class="tag">${esc(item.category)}</span><time datetime="${esc(item.date)}">${fmtDate(item.date)}</time>`;
+  $("dlgTitle").textContent = item.title;
+  $("dlgThumb").innerHTML = thumbHTML(item);
+  $("dlgText").innerHTML = paras(item.details || item.summary);
+  history.replaceState(null, "", "#" + id);
+  dlg.showModal();
+}
+$("dlgClose").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener("close", () => history.replaceState(null, "", location.pathname + location.search));
+
+document.addEventListener("click", (e) => {
+  const more = e.target.closest("button.more");
+  if (more) return openItem(more.dataset.id);
+  const act = e.target.closest("button[data-act]");
+  if (!act) return;
+  if (act.dataset.act === "edit") openForm(act.dataset.id);
+  if (act.dataset.act === "delete") deleteItem(act.dataset.id);
+});
+
+/* ---------- Manage mode ---------- */
+function updateToolbar() { $("tbStatus").textContent = status; }
+function setEditMode(on) {
+  editMode = on;
+  $("toolbar").hidden = !on;
+  document.body.classList.toggle("editing", on);
+  if (on && !status) status = "Changes are saved on this device only. Download the updated website to publish them.";
+  updateToolbar();
+  renderAll();
+}
+$("doneBtn").addEventListener("click", () => setEditMode(false));
+$("addBtn").addEventListener("click", () => openForm(null));
+
+async function persist() {
+  status = "Changes are saved on this device only. Download the updated website to publish them.";
+  try { await idbSet("draft", { base: SEED_SIG, items }); }
+  catch (e) { toast("This browser can't keep a draft. Click “Download updated website” after each change."); }
+  updateToolbar();
+}
+
+async function deleteItem(id) {
+  const item = items.find((i) => i.id === id);
+  if (!item || !confirm(`Delete “${item.title}”?`)) return;
+  items = items.filter((i) => i.id !== id);
+  renderAll();
+  await persist();
+  toast("Deleted.");
+}
+
+$("resetBtn").addEventListener("click", async () => {
+  if (!confirm("Discard all changes made on this device and go back to the published version?")) return;
+  try { await idbDel("draft"); } catch (e) {}
+  items = SEED.map((x) => ({ ...x }));
+  status = "Back to the published version.";
+  renderAll(); updateToolbar();
+});
+
+/* ---------- Officer sign-in (a soft lock, see notes) ---------- */
+let LOCK = { hash: "", salt: "" };
+try { LOCK = Object.assign(LOCK, JSON.parse($("lock").textContent || "{}")); } catch (e) {}
+const loginDlg = $("loginDlg");
+let loginMode = "enter";   // "enter" or "create"
+
+async function sha256(s) {
+  const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+  return [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
+}
+const newSalt = () => [...crypto.getRandomValues(new Uint8Array(8))].map((x) => x.toString(16).padStart(2, "0")).join("");
+
+function openLogin(mode) {
+  loginMode = mode;
+  $("loginTitle").textContent = mode === "create" ? (LOCK.hash ? "Change officer passcode" : "Create an officer passcode") : "Officer sign-in";
+  $("loginMsg").textContent = mode === "create"
+    ? "Choose a passcode of at least 6 characters. It is saved in the website file when you download it."
+    : "Enter the officer passcode to manage events.";
+  $("pass2Field").hidden = mode !== "create";
+  $("pass").autocomplete = mode === "create" ? "new-password" : "current-password";
+  $("pass").value = ""; $("pass2").value = ""; $("loginErr").textContent = "";
+  loginDlg.showModal();
+  $("pass").focus();
+}
+$("loginCancel").addEventListener("click", () => loginDlg.close());
+$("passBtn").addEventListener("click", () => openLogin("create"));
+
+$("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (!(window.crypto && crypto.subtle)) {
+    $("loginErr").textContent = "This browser can't check passcodes on this address. Open the site from its https link.";
+    return;
+  }
+  const p = $("pass").value;
+  if (loginMode === "create") {
+    if (p.length < 6) { $("loginErr").textContent = "Please use at least 6 characters."; return; }
+    if (p !== $("pass2").value) { $("loginErr").textContent = "The two passcodes don't match."; return; }
+    const salt = newSalt();
+    LOCK = { salt, hash: await sha256(salt + p) };
+    loginDlg.close();
+    status = "Passcode set. Download the updated website to save it.";
+    setEditMode(true);
+    toast("Passcode set. Click “Download updated website” and upload the file to keep it.");
+  } else {
+    await new Promise((r) => setTimeout(r, 700));   // slows down guessing
+    if ((await sha256(LOCK.salt + p)) === LOCK.hash) { loginDlg.close(); setEditMode(true); }
+    else { $("loginErr").textContent = "That passcode isn't right."; $("pass").select(); }
+  }
+});
+
+// Officers open the editor with   yoursite/#officers   (there is no public button for it)
+function checkOfficerLink() {
+  if (location.hash !== "#officers") return;
+  history.replaceState(null, "", location.pathname + location.search);
+  if (!editMode) openLogin(LOCK.hash ? "enter" : "create");
+}
+window.addEventListener("hashchange", checkOfficerLink);
+
+// Hidden shortcut: tap the "IS" logo 3 times quickly to open the officer sign-in
+let logoTaps = [];
+$("brandName").addEventListener("click", (e) => {
+  const r = e.currentTarget.getBoundingClientRect();
+  if (e.clientX - r.left > 42) return;            // only the logo square, not the name
+  const now = Date.now();
+  logoTaps = logoTaps.filter((t) => now - t < 1500).concat(now);
+  if (logoTaps.length >= 3) {
+    logoTaps = [];
+    e.preventDefault();
+    if (!editMode) openLogin(LOCK.hash ? "enter" : "create");
+  }
+});
+
+/* ---------- Add / edit form ---------- */
+const formDlg = $("formDlg");
+const currentImage = () => pendingImage !== undefined ? pendingImage : (editingId ? ((items.find((x) => x.id === editingId) || {}).image || "") : "");
+
+function renderPreview() {
+  const src = currentImage();
+  $("imgPreview").innerHTML = src
+    ? `<img src="${esc(src)}" alt="Preview of the chosen picture"><button type="button" class="mini" id="rmImg">Remove picture</button>`
+    : "";
+  $("altField").hidden = !src;
+}
+$("imgPreview").addEventListener("click", (e) => {
+  if (e.target.id === "rmImg") { pendingImage = ""; $("fImage").value = ""; renderPreview(); }
+});
+
+function shrink(file, maxW = 1100, quality = 0.8) {
+  return new Promise((res, rej) => {
+    if (!file.type.startsWith("image/")) return rej(new Error("not an image"));
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      const sc = Math.min(1, maxW / img.naturalWidth);
+      const w = Math.round(img.naturalWidth * sc), h = Math.round(img.naturalHeight * sc);
+      const c = document.createElement("canvas"); c.width = w; c.height = h;
+      const x = c.getContext("2d");
+      x.fillStyle = "#fff"; x.fillRect(0, 0, w, h);
+      x.drawImage(img, 0, 0, w, h);
+      URL.revokeObjectURL(url);
+      res(c.toDataURL("image/jpeg", quality));
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); rej(new Error("could not load")); };
+    img.src = url;
+  });
+}
+$("fImage").addEventListener("change", async (e) => {
+  const f = e.target.files[0];
+  if (!f) return;
+  try { pendingImage = await shrink(f); $("formErr").textContent = ""; renderPreview(); }
+  catch (err) { $("formErr").textContent = "Sorry, that file could not be read as a picture. Try a JPG or PNG."; }
+});
+
+function openForm(id) {
+  editingId = id; pendingImage = undefined;
+  const item = id ? items.find((i) => i.id === id) : null;
+  const cats = [...new Set([...CATEGORIES, item && item.category].filter(Boolean))];
+  $("fCat").innerHTML = cats.map((c) => `<option>${esc(c)}</option>`).join("");
+  $("formTitle").textContent = item ? "Edit accomplishment" : "Add accomplishment";
+  $("fTitle").value = item ? item.title : "";
+  $("fDate").value = item ? item.date : today();
+  $("fCat").value = item ? item.category : CATEGORIES[0];
+  $("fSummary").value = item ? item.summary : "";
+  $("fDetails").value = item ? item.details : "";
+  $("fFeatured").checked = item ? !!item.featured : false;
+  $("fAlt").value = item ? (item.imageAlt || "") : "";
+  $("fImage").value = "";
+  $("formErr").textContent = "";
+  renderPreview();
+  formDlg.showModal();
+  $("fTitle").focus();
+}
+$("formCancel").addEventListener("click", () => formDlg.close());
+
+const makeId = (title) => {
+  const base = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40) || "item";
+  let id = base + "-" + Date.now().toString(36);
+  while (items.some((i) => i.id === id)) id += "x";
+  return id;
+};
+
+$("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const title = $("fTitle").value.trim(), date = $("fDate").value, summary = $("fSummary").value.trim();
+  if (!title || !date || !summary) { $("formErr").textContent = "Please fill in the title, date and one-line summary."; return; }
+  const img = currentImage();
+  const data = {
+    title, date, summary,
+    category: $("fCat").value,
+    featured: $("fFeatured").checked,
+    details: $("fDetails").value.trim() || summary,
+    image: img,
+    imageAlt: img ? ($("fAlt").value.trim() || title) : ""
+  };
+  const wasEditing = !!editingId;
+  if (wasEditing) {
+    const i = items.findIndex((x) => x.id === editingId);
+    items[i] = { ...items[i], ...data };
+  } else {
+    items.push({ id: makeId(title), ...data });
+  }
+  formDlg.close();
+  renderAll();
+  await persist();
+  toast(wasEditing ? "Saved your changes." : "Added! It now shows on your site here. Download the updated website to publish it.");
+});
+
+/* ---------- Download the updated single-file website ---------- */
+$("exportBtn").addEventListener("click", () => {
+  const clone = document.documentElement.cloneNode(true);
+  ["brandName","heroTitle","heroTagline","stats","featuredGrid","chips","year","count","grid",
+   "aboutMission","aboutStory","footName","yr","dlgMeta","dlgTitle","dlgThumb","dlgText",
+   "fCat","imgPreview","formErr","toast","tbStatus","loginTitle","loginMsg","loginErr"].forEach((id) => {
+    const el = clone.querySelector("#" + id);
+    if (el) el.innerHTML = "";
+  });
+  clone.querySelector("#emailBtn").setAttribute("href", "#");
+  clone.querySelector("#featured").removeAttribute("hidden");
+  clone.querySelector("#altField").setAttribute("hidden", "");
+  clone.querySelector("#toolbar").setAttribute("hidden", "");
+  clone.querySelector("body").removeAttribute("class");
+  clone.querySelectorAll("dialog").forEach((d) => d.removeAttribute("open"));
+  clone.querySelector("#lock").textContent = JSON.stringify(LOCK);
+  clone.querySelector("#pass2Field").setAttribute("hidden", "");
+  clone.querySelector("#seed").textContent = JSON.stringify(sorted(), null, 1).replace(/</g, "\\u003c");
+
+  const html = "<!DOCTYPE html>\n" + clone.outerHTML;
+  const blob = new Blob([html], { type: "text/html" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "index.html";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+
+  const mb = blob.size / 1048576;
+  status = "Downloaded index.html. Upload it to your host to publish.";
+  updateToolbar();
+  toast(mb > 8
+    ? `Downloaded (${mb.toFixed(1)} MB). That's large, so consider smaller pictures or fewer of them.`
+    : `Downloaded index.html (${mb.toFixed(1)} MB). Upload it to replace your old one.`);
+});
+
+/* ---------- Start ---------- */
+async function init() {
+  document.title = ORG.name + " | Accomplishments";
+  $("brandName").textContent = ORG.name;
+  $("footName").textContent = ORG.name;
+  $("heroTitle").textContent = ORG.heroTitle;
+  $("heroTagline").textContent = ORG.tagline;
+  $("aboutMission").textContent = ORG.mission;
+  $("aboutStory").textContent = ORG.story;
+  $("emailBtn").href = "mailto:" + ORG.email;
+  $("yr").textContent = new Date().getFullYear();
+
+  // Show the published version immediately, then swap in a saved draft if this device has one.
+  items = SEED.map((x) => ({ ...x }));
+  renderAll();
+  const hash = location.hash.slice(1);
+  if (items.some((i) => i.id === hash)) openItem(hash);
+  checkOfficerLink();
+
+  try {
+    const d = await Promise.race([idbGet("draft"), new Promise((r) => setTimeout(() => r(null), 3000))]);
+    if (d && d.base === SEED_SIG && Array.isArray(d.items)) {
+      items = d.items;
+      status = "You have changes saved on this device that are not published yet.";
+      renderAll(); updateToolbar();
+    } else if (d) {
+      await idbDel("draft");   // the published file was replaced, so the old draft is obsolete
+    }
+  } catch (e) { /* drafts unavailable; the site still works */ }
+}
+init();
+</script>
+</body>
+</html>
