@@ -52,7 +52,7 @@
   .skip:focus { top: 12px; }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 
-  /* ---------- Header ---------- */
+  /*  Header  */
   header.site {
     position: sticky; top: 0; z-index: 10; background: var(--bg);
     background: color-mix(in srgb, var(--bg) 86%, transparent);
@@ -70,7 +70,7 @@
   nav a { display: block; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--muted); font-weight: 600; font-size: .95rem; transition: background .15s, color .15s; }
   nav a:hover { background: var(--surface-2); color: var(--text); }
 
-  /* ---------- Hero ---------- */
+  /* Hero */
   .hero-band {
     position: relative; overflow: hidden; color: #eaf1ff; padding-bottom: 84px;
     background:
@@ -111,7 +111,7 @@
   .code pre { margin: 0; padding: 18px 20px 22px; font-family: var(--mono); font-size: .88rem; line-height: 1.7; color: #d6e2ff; overflow-x: auto; }
   .code .k { color: #7dd3fc; } .code .p { color: #a5b4fc; } .code .s { color: #86efac; }
 
-  /* ---------- Buttons ---------- */
+  /*  Buttons  */
   .btn {
     display: inline-block; background: var(--accent); color: var(--accent-text);
     padding: 12px 22px; border-radius: 12px; font-weight: 700; text-decoration: none; border: 0; cursor: pointer;
@@ -123,7 +123,7 @@
   .hero-cta .btn { background: #2f6bff; color: #fff; }
   .hero-cta .btn.ghost { background: transparent; color: #eaf1ff; border: 1px solid rgba(255,255,255,.35); box-shadow: none; }
 
-  /* ---------- Stats ---------- */
+  /*  Stats  */
   .stats { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: -46px 0 0; }
   .stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; text-align: center; box-shadow: var(--shadow-hover); }
   .stat strong {
@@ -133,7 +133,7 @@
   }
   .stat span { color: var(--muted); font-size: .92rem; font-weight: 600; }
 
-  /* ---------- Sections ---------- */
+  /*  Sections  */
   section { padding: 44px 0; }
   main h2 { font-size: 1.7rem; letter-spacing: -.015em; margin: 0 0 24px; }
   main h2::after {
@@ -199,7 +199,7 @@
 
   #contact .btn { margin-top: 4px; }
 
-  /* ---------- Dialogs ---------- */
+  /*  Dialogs  */
   dialog {
     border: 1px solid var(--border); border-radius: 20px; padding: 0;
     max-width: 640px; width: calc(100% - 32px); background: var(--surface); color: var(--text);
@@ -234,7 +234,7 @@
   #loginMsg { margin: 0; color: var(--muted); }
   #loginErr { color: var(--danger); margin: 0; font-weight: 600; min-height: 1.2em; }
 
-  /* ---------- Manage toolbar + toast ---------- */
+  /*  Manage toolbar + toast  */
   #toolbar {
     position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 50;
     background: var(--navy); color: #eaf1ff; border: 1px solid rgba(125,211,252,.28); border-radius: 16px; padding: 10px 14px;
@@ -251,7 +251,7 @@
   }
   #toast:empty { display: none; }
 
-  /* ---------- Footer ---------- */
+  /*  Footer  */
   footer { background: var(--navy); color: #9db0d6; border-top: 1px solid rgba(125,211,252,.15); padding: 30px 0; font-size: .92rem; }
   .linklike { background: none; border: 0; color: #7dd3fc; text-decoration: underline; cursor: pointer; font: inherit; padding: 0; }
 </style>
@@ -649,7 +649,7 @@ $("resetBtn").addEventListener("click", async () => {
   renderAll(); updateToolbar();
 });
 
-/* ---------- Officer sign-in (a soft lock, see notes) ---------- */
+/*  Officer sign-in (a soft lock, see notes)  */
 let LOCK = { hash: "", salt: "" };
 try { LOCK = Object.assign(LOCK, JSON.parse($("lock").textContent || "{}")); } catch (e) {}
 const loginDlg = $("loginDlg");
@@ -721,7 +721,7 @@ $("brandName").addEventListener("click", (e) => {
   }
 });
 
-/* ---------- Add / edit form ---------- */
+/*  Add / edit form  */
 const formDlg = $("formDlg");
 const currentImage = () => pendingImage !== undefined ? pendingImage : (editingId ? ((items.find((x) => x.id === editingId) || {}).image || "") : "");
 
