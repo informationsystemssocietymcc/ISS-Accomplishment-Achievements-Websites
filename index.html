@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0a1a44">
@@ -261,7 +260,7 @@
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="#top" id="brandName">Information Systems Society</a>
+    <a class="brand" href="#top" id="brandName"></a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#featured">Highlights</a></li>
@@ -353,7 +352,7 @@
 
 <!-- Add / edit form (manage mode) -->
 <dialog id="formDlg" aria-labelledby="formTitle">
-  <form id="form" novalidate>
+  <form id="form" novalidate="">
     <h2 id="formTitle">Add accomplishment</h2>
     <div class="field">
       <label for="fTitle">Title *</label>
@@ -384,7 +383,7 @@
       <small>Pictures are resized automatically so the site stays fast.</small>
       <div class="preview" id="imgPreview"></div>
     </div>
-    <div class="field" id="altField" hidden>
+    <div class="field" id="altField" hidden="">
       <label for="fAlt">Describe the picture (for screen readers)</label>
       <input id="fAlt" maxlength="160" autocomplete="off">
     </div>
@@ -399,16 +398,16 @@
 
 <!-- Officer sign-in -->
 <dialog id="loginDlg" aria-labelledby="loginTitle">
-  <form id="loginForm" novalidate>
-    <h2 id="loginTitle">Officer sign-in</h2>
+  <form id="loginForm" novalidate="">
+    <h2 id="loginTitle"></h2>
     <p id="loginMsg"></p>
     <div class="field">
       <label for="pass">Passcode</label>
-      <input id="pass" type="password" autocomplete="current-password">
+      <input id="pass" type="password" autocomplete="new-password">
     </div>
-    <div class="field" id="pass2Field" hidden>
+    <div class="field" id="pass2Field" hidden="">
       <label for="pass2">Type it again</label>
-      <input id="pass2" type="password" autocomplete="new-password">
+      <input id="pass2" type="password" autocomplete="new-password" aria-autocomplete="list">
     </div>
     <p id="loginErr" role="alert"></p>
     <div class="form-actions">
@@ -419,7 +418,7 @@
 </dialog>
 
 <!-- Manage-mode toolbar -->
-<div id="toolbar" role="region" aria-label="Manage events" hidden>
+<div id="toolbar" role="region" aria-label="Manage events" hidden="">
   <span class="status" id="tbStatus"></span>
   <button class="btn" id="addBtn" type="button">+ Add accomplishment</button>
   <button class="btn" id="exportBtn" type="button">⬇ Download updated website</button>
@@ -430,16 +429,9 @@
 <div id="toast" role="status" aria-live="polite"></div>
 
 <!-- Published accomplishments. "Download updated website" rewrites this block for you. -->
-<script id="seed" type="application/json">[
-  {"id":"robotics-2026","title":"Regional Robotics Championship, 1st Place","date":"2026-10-14","category":"Awards","featured":true,"summary":"Our team took first place out of 24 schools.","details":"After three months of preparation, our team of eight members built and programmed a robot that won the regional championship. The win qualifies us for the national finals next year.","image":"","imageAlt":""},
-  {"id":"tech-fair-2026","title":"Annual Tech Fair 2026","date":"2026-08-22","category":"Events","featured":true,"summary":"Over 400 attendees joined our biggest fair yet.","details":"The Tech Fair featured 15 booths, 6 guest speakers and a student demo showcase. Attendance doubled compared to last year.","image":"","imageAlt":""},
-  {"id":"community-app-2026","title":"Community Helpdesk App Launched","date":"2026-05-30","category":"Projects","featured":true,"summary":"A free web app that connects residents with volunteers.","details":"Built entirely by our members, the app lets residents request help and volunteers sign up for tasks. It is now used by three neighborhood groups.","image":"","imageAlt":""},
-  {"id":"tree-planting-2025","title":"Tree Planting Drive","date":"2025-11-09","category":"Community","featured":false,"summary":"250 seedlings planted along the riverbank.","details":"Working with local partners, 60 volunteers planted 250 native seedlings in a single morning.","image":"","imageAlt":""},
-  {"id":"hackathon-2025","title":"Hackathon Runner-Up","date":"2025-03-15","category":"Awards","featured":false,"summary":"Second place at the inter-university hackathon.","details":"A team of four built a prototype in 24 hours and presented it to a panel of industry judges.","image":"","imageAlt":""},
-  {"id":"orientation-2025","title":"Freshman Orientation Program","date":"2025-08-05","category":"Events","featured":false,"summary":"Welcomed 180 new students with workshops and games.","details":"A full day of activities designed to help new students meet peers, learn about campus resources and join organizations.","image":"","imageAlt":""}
-]</script>
+<script id="seed" type="application/json">[]</script>
 <!-- Officer passcode (stored as a salted hash). "Download updated website" rewrites this block. -->
-<script id="lock" type="application/json">{"hash":"","salt":""}</script>
+<script id="lock" type="application/json">{"salt":"bcbc852a5f71dcd6","hash":"5bc338a8422ac0cdd0377d0695ad6d54011552371f954bf246babc2fa5e91359"}</script>
 
 <script>
 /* =====================================================================
@@ -883,5 +875,6 @@ async function init() {
 }
 init();
 </script>
-</body>
-</html>
+
+
+</body></html>
